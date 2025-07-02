@@ -10,7 +10,7 @@ window.members = [
   {
     nom: "Ethabo Jackson",
     role: ["Security", "logistic"],
-    image: "https://scontent.flis9-2.fna.fbcdn.net/v/t39.30808-6/459724599_1057227503073529_5664565970566000004_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=_HElMLaZ76AQ7kNvwG2wMat&_nc_oc=AdlHlpKNQcm78KquHxZhTIeOr6b1r4vxjctqi4i63DdM-ef4PCP6gstBkkWVAy2hI2s&_nc_zt=23&_nc_ht=scontent.flis9-2.fna&_nc_gid=tEtQvigak49tTT45xau8zg&oh=00_AfPWt28RJksG1yZLoClrouRR9o_Q_xMsEEYbQhkMqySbtQ&oe=6869FE4B",
+    image: "https://github.com/bw-n/JWL/blob/main/IMG_20250701_215001_554.jpg?raw=true",
     fiche: "ethabo-jackson.html",
     metier: ["Security", "logistic"]
   }
