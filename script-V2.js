@@ -11,7 +11,7 @@ window.members = [
     nom: "Ethabo Jackson",
     role: ["Security", "logistic"],
     image: "https://github.com/bw-n/JWL/blob/main/IMG_20250701_215001_554.jpg?raw=true",
-    fiche: "ethabo-jackson.html",
+    fiche: "https://www.instagram.com/ethabojackson/?igsh=MW9xM3IzcmE3MHN0Yw%3D%3D#",
     metier: ["Security", "logistic"]
   }
 ]; // 👈 N’oublie pas ce point-virgule pour fermer proprement l’array
