@@ -10,7 +10,7 @@ window.members = [
   {
     nom: "Ethabo Jackson",
     role: ["Security", "logistic"],
-    image: "https://github.com/bw-n/JWL/blob/main/IMG_20250701_215001_554.jpg?raw=true",
+    image: "https://github.com/bw-n/HP-final/blob/dev/ethabo-jackson.jpg?raw=true",
     fiche: "https://www.instagram.com/ethabojackson/?igsh=MW9xM3IzcmE3MHN0Yw%3D%3D#",
     metier: ["Security", "logistic"]
   }
