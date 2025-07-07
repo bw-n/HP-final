@@ -4,23 +4,22 @@ window.members = [
     nom: "JoweL Homeskillz",
     role: ["Dev", "creative 360", "musique", "founder"],
     image: "https://www.jow-l.com/uploads/9/7/1/8/9718598/published/homeskillz-450px-2017-discogs.jpg?1716919812",
-    website: "https://www.jow-l.com/",
+    fiche: "https://www.jow-l.com/",
     metier: ["Dev", "creative 360", "musique"]
   },
   {
     nom: "Ethabo Jackson",
     role: ["Security", "logistic"],
-    image: "https://github.com/bw-n/HP-final/blob/dev/ethabo-jackson.jpg?raw=true",
+    image: "https://raw.githubusercontent.com/bw-n/HP-final/main/ethabo-jackson.jpg",
     fiche: "https://www.instagram.com/ethabojackson/?igsh=MW9xM3IzcmE3MHN0Yw%3D%3D#",
     metier: ["Security", "logistic"]
   }
-]; // 👈 N’oublie pas ce point-virgule pour fermer proprement l’array
+];
 
 // Logique du Hub
 document.addEventListener("DOMContentLoaded", function () {
   const membersData = window.members;
 
-  // Extraire la liste unique des métiers
   const allMetiers = membersData.flatMap(m =>
     Array.isArray(m.metier) ? m.metier : [m.metier]
   );
@@ -35,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  // Afficher les membres passés en liste
   function renderMembers(list) {
     memberGrid.innerHTML = "";
     if (list.length === 0) {
@@ -45,11 +43,12 @@ document.addEventListener("DOMContentLoaded", function () {
     list.forEach(m => {
       const card = document.createElement("div");
       card.className = "card";
+      const lien = m.fiche || m.website || "#";
       card.innerHTML = `
         <img src="${m.image}" alt="Photo de ${m.nom}">
         <div class="nom">${m.nom}</div>
         <div class="role">${Array.isArray(m.role) ? m.role.join(", ") : m.role}</div>
-        <a href="${m.fiche}" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
+        <a href="${lien}" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
       `;
       memberGrid.appendChild(card);
     });
@@ -60,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Afficher tous les membres et ré-afficher les filtres
   function showAll() {
     renderMembers(membersData);
     filtersDiv.style.display = "flex";
@@ -71,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollTo({ top: y - offset, behavior: "smooth" });
   }
 
-  // Filtrer les membres par métier sélectionné
   function filterBy(metier) {
     const filtered = membersData.filter(m =>
       Array.isArray(m.metier) ? m.metier.includes(metier) : m.metier === metier
@@ -81,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
     backButton.style.display = "block";
   }
 
-  // Créer un bouton pour chaque métier unique dans le filtre
   uniqueFilters.forEach(metier => {
     const btn = document.createElement("button");
     btn.textContent = metier;
@@ -89,10 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     filtersDiv.appendChild(btn);
   });
 
-  // Bouton retour
   backButton.addEventListener("click", showAll);
-
-  // Afficher tous les membres par défaut au chargement
   showAll();
 
   console.log("✅ script-V2.js chargé avec", window.members.length, "membres");
