@@ -9,10 +9,227 @@ window.members = [
   },
   {
     nom: "Ethabo Jackson",
-    role: ["Security", "logistic"],
+    role: ["Security Bodyguard"],
     image: "https://raw.githubusercontent.com/bw-n/HP-final/main/ethabo-jackson.jpg",
     fiche: "https://www.instagram.com/ethabojackson/?igsh=MW9xM3IzcmE3MHN0Yw%3D%3D#",
-    metier: ["Security", "logistic"]
+    metier: ["Security Bodyguard"]
+  }
+  {
+    nom: "your Name",
+    role: "Smart Contract Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Solidity Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Rust Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Blockchain Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Blockchain Architect",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Consensus Algorithm Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "ZKP Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Web3 Frontend Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Développement Frontend"
+  },
+  {
+    nom: "your Name",
+    role: "Web3 Backend Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Développement Backend"
+  },
+  {
+    nom: "your Name",
+    role: "Web3 Fullstack Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Développement Fullstack"
+  },
+  {
+    nom: "your Name",
+    role: "Mobile Web3 Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Développement Mobile"
+  },
+  {
+    nom: "your Name",
+    role: "dApp Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Applications Décentralisées"
+  },
+  {
+    nom: "your Name",
+    role: "DevOps Web3 Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Infrastructure & Cloud"
+  },
+  {
+    nom: "your Name",
+    role: "Cloud Architect",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Infrastructure & Cloud"
+  },
+  {
+    nom: "your Name",
+    role: "Site Reliability Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Infrastructure & Cloud"
+  },
+  {
+    nom: "your Name",
+    role: "Network Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Infrastructure & Cloud"
+  },
+  {
+    nom: "your Name",
+    role: "Cybersecurity Specialist",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Cybersécurité"
+  },
+  {
+    nom: "your Name",
+    role: "Smart Contract Auditor",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Cybersécurité"
+  },
+  {
+    nom: "your Name",
+    role: "Penetration Tester (Web3)",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Cybersécurité"
+  },
+  {
+    nom: "your Name",
+    role: "Ethical Hacker",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Cybersécurité"
+  },
+  {
+    nom: "your Name",
+    role: "Blockchain Forensics Analyst",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Cybersécurité"
+  },
+  {
+    nom: "your Name",
+    role: "Data Analyst (on-chain)",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Data & Intelligence Artificielle"
+  },
+  {
+    nom: "your Name",
+    role: "Blockchain Data Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Data & Intelligence Artificielle"
+  },
+  {
+    nom: "your Name",
+    role: "AI & ML Engineer (Web3)",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Data & Intelligence Artificielle"
+  },
+  {
+    nom: "your Name",
+    role: "Protocol Researcher",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Recherche & R&D"
+  },
+  {
+    nom: "your Name",
+    role: "Cryptography Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Recherche & R&D"
+  },
+  {
+    nom: "your Name",
+    role: "Quantum R&D Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Recherche & R&D"
+  },
+  {
+    nom: "your Name",
+    role: "Oracle Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Bridge Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Integration Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Développement Backend"
+  },
+  {
+    nom: "your Name",
+    role: "Middleware Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Infrastructure & Cloud"
   }
 ];
 
