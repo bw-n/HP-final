@@ -234,22 +234,22 @@ window.members = [
   }
 ];
 
-// Logique du Hub
+// LOGIQUE DU HUB
 document.addEventListener("DOMContentLoaded", function () {
   const membersData = window.members;
 
-  // Récupérer tous les métiers
+  // Extraire tous les métiers
   let allMetiers = membersData.flatMap(m =>
     Array.isArray(m.metier) ? m.metier : [m.metier]
   );
 
-  // Ajouter le filtre "ELITE" si un membre l'est
+  // Ajouter "ELITE" si au moins un membre est elite
   const hasElite = membersData.some(m => m.elite);
   if (hasElite) allMetiers.push("ELITE");
 
   const uniqueFilters = [...new Set(allMetiers)].sort();
 
-  // Sélection des éléments
+  // Éléments du DOM
   const filtersDiv = document.getElementById("filters");
   const memberGrid = document.getElementById("member-grid");
   const backButton = document.getElementById("backButton");
@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  // Affiche les membres donnés
+  // Rendu des membres
   function renderMembers(list) {
     memberGrid.innerHTML = "";
 
@@ -270,21 +270,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     list.forEach(m => {
       const card = document.createElement("div");
-      card.className = "card";
+      card.className = "member-block";
+      if (m.elite) card.classList.add("elite");
+
       const lien = m.fiche || m.website || "#";
       const roles = Array.isArray(m.role) ? m.role.join(", ") : m.role;
 
       card.innerHTML = `
-        <img src="${m.image}" alt="Photo de ${m.nom}">
-        <div class="nom">${m.nom}</div>
-        <div class="role">${roles}</div>
-        <a href="${lien}" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
+        <div class="member-photo" style="background-image: url('${m.image}')"></div>
+        <div class="member-name">${m.nom}</div>
+        <div class="member-role">${roles}</div>
+        <a href="${lien}" class="view-link" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
       `;
 
       memberGrid.appendChild(card);
     });
 
-    // Scroll auto pour petits écrans
+    // Scroll auto sur mobile
     if (window.innerWidth <= 768) {
       const y = memberGrid.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: y - 20, behavior: "smooth" });
@@ -313,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
     backButton.style.display = "block";
   }
 
-  // Création des boutons filtres
+  // Créer les boutons filtres
   uniqueFilters.forEach(metier => {
     const btn = document.createElement("button");
     btn.textContent = metier;
@@ -322,8 +324,11 @@ document.addEventListener("DOMContentLoaded", function () {
     filtersDiv.appendChild(btn);
   });
 
+  // Bouton retour
   backButton.addEventListener("click", showAll);
+
+  // Affichage initial
   showAll();
 
-  console.log("✅ Script fusionné chargé avec", membersData.length, "membres");
+  console.log("✅ Script chargé avec", membersData.length, "membres");
 });
