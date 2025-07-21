@@ -2,10 +2,10 @@
 window.members = [
   {
     nom: "JoweL Homeskillz",
-    role: ["Dev", "creative 360", "musique", "founder"],
+    role: ["Dev", "creative 360", "founder"],
     image: "https://www.jow-l.com/uploads/9/7/1/8/9718598/published/homeskillz-450px-2017-discogs.jpg?1716919812",
     fiche: "https://www.jow-l.com/",
-    metier: ["Dev", "creative 360", "musique"]
+    metier: ["Dev", "creative 360"]
   },
   {
     nom: "Ethabo Jackson",
