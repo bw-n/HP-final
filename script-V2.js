@@ -12,7 +12,8 @@ window.members = [
     role: ["Security Bodyguard"],
     image: "https://raw.githubusercontent.com/bw-n/HP-final/main/ethabo-jackson.jpg",
     fiche: "https://www.instagram.com/ethabojackson/?igsh=MW9xM3IzcmE3MHN0Yw%3D%3D#",
-    metier: ["Security Bodyguard"]
+    metier: ["Security Bodyguard"],
+    elite: true
   },
   {
     nom: "your Name",
