@@ -234,73 +234,50 @@ window.members = [
   }
 ];
 
-// LOGIQUE DU HUB
+// Logique du Hub
 document.addEventListener("DOMContentLoaded", function () {
   const membersData = window.members;
 
-  // Extraire tous les métiers
-  let allMetiers = membersData.flatMap(m =>
+  const allMetiers = membersData.flatMap(m =>
     Array.isArray(m.metier) ? m.metier : [m.metier]
   );
 
-  // Ajouter "ELITE" si au moins un membre est elite
+  // Ajouter "ELITE" comme filtre si au moins un membre est elite
   const hasElite = membersData.some(m => m.elite);
   if (hasElite) allMetiers.push("ELITE");
 
   const uniqueFilters = [...new Set(allMetiers)].sort();
 
-  // Éléments du DOM
   const filtersDiv = document.getElementById("filters");
   const memberGrid = document.getElementById("member-grid");
   const backButton = document.getElementById("backButton");
 
   if (!filtersDiv || !memberGrid || !backButton) {
-    console.warn("Certains éléments HTML manquent.");
+    console.warn("Certains éléments HTML manquent : vérifie l'existence des IDs filters, member-grid et backButton.");
     return;
   }
 
-  // Rendu des membres
   function renderMembers(list) {
     memberGrid.innerHTML = "";
-
     if (list.length === 0) {
       memberGrid.innerHTML = "<p>Aucun membre trouvé.</p>";
       return;
     }
-
     list.forEach(m => {
       const card = document.createElement("div");
-      card.className = "member-block";
-      if (m.elite) card.classList.add("elite");
-
-      const lien = m.fiche || m.website || "#";
-      const roles = Array.isArray(m.role) ? m.role.join(", ") : m.role;
-
-      card.innerHTML = `
-        <div class="member-photo" style="background-image: url('${m.image}')"></div>
-        <div class="member-name">${m.nom}</div>
-        <div class="member-role">${roles}</div>
-        <a href="${lien}" class="view-link" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
-      `;
-
+      card.className = "member-block" + (m.elite ? " elite" : "");
+      card.innerHTML =
+        '<div class="member-photo" style="background-image:url(' + m.image + ')"></div>' +
+        '<div class="member-name">' + m.nom + '</div>' +
+        '<div class="member-role">' + m.role + '</div>' +
+        '<a class="view-link" href="' + m.fiche + '" target="_blank" rel="noopener noreferrer">Voir la fiche</a>';
       memberGrid.appendChild(card);
     });
 
-    // Scroll auto sur mobile
     if (window.innerWidth <= 768) {
       const y = memberGrid.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: y - 20, behavior: "smooth" });
     }
-  }
-
-  function showAll() {
-    renderMembers(membersData);
-    filtersDiv.style.display = "flex";
-    backButton.style.display = "none";
-
-    const y = filtersDiv.getBoundingClientRect().top + window.scrollY;
-    const offset = window.innerWidth > 768 ? 100 : 20;
-    window.scrollTo({ top: y - offset, behavior: "smooth" });
   }
 
   function filterBy(metier) {
@@ -309,26 +286,22 @@ document.addEventListener("DOMContentLoaded", function () {
       : membersData.filter(m =>
           Array.isArray(m.metier) ? m.metier.includes(metier) : m.metier === metier
         );
-
     renderMembers(filtered);
-    filtersDiv.style.display = "none";
-    backButton.style.display = "block";
   }
 
-  // Créer les boutons filtres
+  backButton.addEventListener("click", () => {
+  const y = filtersDiv.getBoundingClientRect().top + window.scrollY;
+  const offset = window.innerWidth > 768 ? 100 : 20;
+  window.scrollTo({ top: y - offset, behavior: "smooth" });
+});
+
   uniqueFilters.forEach(metier => {
-    const btn = document.createElement("button");
-    btn.textContent = metier;
-    btn.onclick = () => filterBy(metier);
-    if (metier === "ELITE") btn.classList.add("elite-btn");
-    filtersDiv.appendChild(btn);
-  });
+  const btn = document.createElement("button");
+  btn.textContent = metier;
+  btn.onclick = () => filterBy(metier);
+  if (metier === "ELITE") btn.classList.add("elite-btn");
+  filtersDiv.appendChild(btn);
+});
 
-  // Bouton retour
-  backButton.addEventListener("click", showAll);
-
-  // Affichage initial
-  showAll();
-
-  console.log("✅ Script chargé avec", membersData.length, "membres");
+  console.log("✅ script-V4-final.js chargé avec", membersData.length, "membres");
 });
